@@ -12,17 +12,13 @@ Static resume website with a modern timeline layout, theme switcher, mobile-frie
 
 ### 1) Run locally
 
-Because this site uses separate JS files for content rendering, run it through a local web server (not `file://`).
+You can access the website by simply opening the "index.html" file (`file://`) without the need to starting a local web server. 
 
 Example:
 
 ```bash
-python3 -m http.server 8000
+file:///git/online-resume/index.html
 ```
-
-Open:
-
-- `http://localhost:8000`
 
 ### 2) Edit content
 
