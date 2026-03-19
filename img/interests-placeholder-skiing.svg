@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Skiing Placeholder</title>
+  <desc id="desc">Placeholder image for skiing interest photo</desc>
+  <defs>
+    <linearGradient id="sky2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#6ca0ff"/>
+      <stop offset="100%" stop-color="#eaf3ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky2)"/>
+  <path d="M0 700L300 540L530 690L760 520L1030 700L1280 560L1600 710V900H0Z" fill="#dbe7f7"/>
+  <path d="M0 770L240 690L520 790L760 680L1040 800L1320 700L1600 790V900H0Z" fill="#c7d9ef"/>
+  <text x="50%" y="82%" text-anchor="middle" font-family="Open Sans, Arial, sans-serif" font-size="56" fill="#375a84">Replace with your skiing photo</text>
+</svg>

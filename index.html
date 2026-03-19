@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<meta name="description" content="Page Loading Effects: Modern ways of revealing new content" />
+		<meta name="keywords" content="page loading, svg animation, loading effect, fullscreen svg" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link href="css/resume.min.css" rel="stylesheet">
+		<link href="css/enhancements.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.1/css/all.min.css" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.1/css/v4-shims.min.css" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/simple-line-icons@2.5.5/css/simple-line-icons.css" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="js/snap.svg-min.js"></script>
+		<title>Resume Patrick B.</title>
+	</head>
+	<body id="page-top">
+		<div id="scroll-progress" aria-hidden="true"></div>
+		<div id="pagewrap" class="pagewrap">
+			<div class="container show" id="page-1">
+
+			</div><!-- /container -->
+
+			<!-- Resume content; this would be dynamically loaded content -->
+			<div class="container" id="page-2">
+				<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+					<a class="navbar-brand js-scroll-trigger" href="#page-top">
+					  <span class="d-block d-lg-none">
+						<img id="profile-image-mobile" class="img-fluid img-profile-mobile rounded-circle" src="img/profile.jpg" alt="Portrait of Patrick Buehlmann" role="button" tabindex="0" aria-label="Open larger profile image">
+					  </span>
+					  <span class="d-none d-lg-block">
+						<img id="profile-image" class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="Portrait of Patrick Buehlmann" role="button" tabindex="0" aria-label="Open larger profile image">
+					</span>
+					</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					  <span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					  <ul class="navbar-nav">
+						<li class="nav-item">
+						  <a class="nav-link js-scroll-trigger" href="#about">About</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
+						</li>
+					  </ul>
+					</div>
+					<div class="theme-switcher" role="group" aria-label="Color theme switcher">
+					  <button class="theme-dot theme-dot-blue is-active" type="button" data-theme="blue" aria-label="Blue and white theme" aria-pressed="true"></button>
+					  <button class="theme-dot theme-dot-sage" type="button" data-theme="sage" aria-label="Green and white theme" aria-pressed="false"></button>
+					  <button class="theme-dot theme-dot-beige" type="button" data-theme="beige" aria-label="Beige and white theme" aria-pressed="false"></button>
+					</div>
+					<button id="download-cv-btn" class="download-cv-btn" type="button">Download CV</button>
+					<p id="last-update" class="mb-0" style="color: rgba(255,255,255,.5); font-size: 10px;">last update: February 13, 2026</p>
+				  </nav>
+			  
+				  <div class="container-fluid p-0">
+			  
+					<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="about">
+					  <div class="my-auto" id="about-content"></div>
+					</section>
+			  
+					<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+					  <div class="my-auto" id="experience-content"></div>
+			  
+					</section>
+			  
+					<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+					  <div class="my-auto" id="education-content"></div>
+					</section>
+			  
+					<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+					  <div class="my-auto" id="skills-content"></div>
+					</section>
+			  
+					<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
+					  <div class="my-auto" id="interests-content"></div>
+					</section>
+			  
+					<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+					  <div class="my-auto" id="awards-content"></div>
+					</section>
+			  
+				  </div>
+			  
+				  <!-- Bootstrap core JavaScript -->
+				  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+				  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
+				  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+				  <script src="content/resume-content.js"></script>
+				  <script src="content/profile-image-data.js"></script>
+				  <script src="js/content-renderer.js"></script>
+				  <script src="js/pdf-export.js"></script>
+			  
+				  <!-- Custom scripts for this template -->
+				  <script src="js/resume.min.js"></script>
+			  
+			</div><!-- /container -->
+
+			<div id="loader" class="pageload-overlay" data-opening="M 0,0 80,-10 80,60 0,70 0,0" data-closing="M 0,-10 80,-20 80,-10 0,0 0,-10">
+				<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
+					<path d="M 0,70 80,60 80,80 0,80 0,70"/>
+				</svg>
+			</div><!-- /pageload-overlay -->
+			
+		</div><!-- /pagewrap -->
+		<script src="js/classie.js"></script>
+		<script src="js/svgLoader.js"></script>
+		<script>
+			(function() {
+				var pageWrap = document.getElementById( 'pagewrap' ),
+					pages = [].slice.call( pageWrap.querySelectorAll( 'div.container' ) ),
+					currentPage = 0,
+					triggerLoading = [].slice.call( pageWrap.querySelectorAll( 'a.pageload-link' ) ),
+					loader = new SVGLoader( document.getElementById( 'loader' ), { speedIn : 400, easingIn : mina.easeinout } );
+
+				function init() {
+						window.addEventListener( 'load', function( ev ) {
+							ev.preventDefault();
+							loader.show();
+							// after some time hide loader
+							setTimeout( function() {
+								loader.hide();
+
+								classie.removeClass( pages[ currentPage ], 'show' );
+								// update..
+								currentPage = currentPage ? 0 : 1;
+								classie.addClass( pages[ currentPage ], 'show' );
+
+							}, 1500 );
+						} );
+				}
+
+				init();
+			})();
+		</script>
+		<button id="back-to-top" class="btn btn-primary" aria-label="Back to top">
+			<i class="fas fa-arrow-up"></i>
+		</button>
+		<div id="image-lightbox" class="image-lightbox" aria-hidden="true">
+			<button id="image-lightbox-close" class="image-lightbox-close" type="button" aria-label="Close image preview">&times;</button>
+			<img id="image-lightbox-preview" src="" alt="">
+		</div>
+		<div id="copy-toast" class="copy-toast" role="status" aria-live="polite">Email copied to clipboard.</div>
+		<script src="js/enhancements.js"></script>
+	</body>
+</html>
