@@ -429,6 +429,7 @@ a:active {
   overflow: hidden;
   background: #ffffff;
   height: 100%;
+  position: relative;
 }
 
 .interest-photo-card img {
@@ -436,6 +437,14 @@ a:active {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.interest-photo-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  pointer-events: none;
 }
 
 .role-rotator {
