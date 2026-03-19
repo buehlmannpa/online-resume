@@ -179,19 +179,19 @@ window.resumeContent = {
     ],
     photos: [
       {
-        src: "img/interests-placeholder-landscape.svg",
-        alt: "Placeholder for a landscape photo",
-        caption: "Landscape Placeholder"
+        src: "img/outdoor&balance.png",
+        alt: "Outdoor and balance themed image",
+        caption: "Outdoor & Balance"
       },
       {
-        src: "img/interests-placeholder-skiing.svg",
-        alt: "Placeholder for a skiing photo",
-        caption: "Skiing Placeholder"
+        src: "img/motorsport&lifestyle.png",
+        alt: "Motorsport and lifestyle themed image",
+        caption: "Motorsport & Lifestyle"
       },
       {
-        src: "img/interests-placeholder-outdoor.svg",
-        alt: "Placeholder for an outdoor activity photo",
-        caption: "Outdoor Placeholder"
+        src: "img/photography&travel.png",
+        alt: "Photography and travel themed image",
+        caption: "Photography & Travel"
       }
     ]
   },

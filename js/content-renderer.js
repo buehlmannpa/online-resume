@@ -228,36 +228,38 @@
       const buckets = Array.isArray(content.interests.buckets) ? content.interests.buckets : [];
       const photos = Array.isArray(content.interests.photos) ? content.interests.photos : [];
 
-      const bucketHtml = buckets
-        .map(
-          (entry) => `
+      const rowCount = Math.max(buckets.length, photos.length);
+      const interestRows = Array.from({ length: rowCount }, (_, index) => {
+        const entry = buckets[index];
+        const photo = photos[index];
+
+        const cardHtml = entry
+          ? `
           <article class="interest-card">
             <p class="interest-label">${escapeHtml(entry.label || "")}</p>
             <h3 class="interest-title">${escapeHtml(entry.title || "")}</h3>
             <p class="interest-why">${escapeHtml(entry.why || "")}</p>
           </article>`
-        )
-        .join("");
+          : "";
 
-      const photoHtml = photos
-        .map(
-          (photo) => `
+        const photoHtml = photo
+          ? `
           <figure class="interest-photo-card">
-            <img src="${escapeHtml(photo.src || "")}" alt="${escapeHtml(photo.alt || "Interest placeholder image")}" loading="lazy">
-            <figcaption>${escapeHtml(photo.caption || "")}</figcaption>
+            <img src="${escapeHtml(photo.src || "")}" alt="${escapeHtml(photo.alt || "Interest image")}" loading="lazy">
           </figure>`
-        )
-        .join("");
+          : "";
+
+        return `
+          <div class="interest-row">
+            ${cardHtml}
+            ${photoHtml}
+          </div>`;
+      }).join("");
 
       interestsEl.innerHTML = `
         <h2 class="mb-5">Interests</h2>
         <div class="interest-layout">
-          <div class="interest-grid">
-            ${bucketHtml}
-          </div>
-          <div class="interest-photos">
-            ${photoHtml}
-          </div>
+          ${interestRows}
         </div>`;
     }
   }
