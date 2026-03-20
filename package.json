@@ -1,0 +1,23 @@
+{
+  "name": "primary",
+  "version": "1.0.0",
+  "description": "Static resume website with a modern timeline layout, theme switcher, mobile-friendly navigation, animated profile image lightbox, and content managed from a single file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buehlmannpa/online-resume.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buehlmannpa/online-resume/issues"
+  },
+  "homepage": "https://github.com/buehlmannpa/online-resume#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
